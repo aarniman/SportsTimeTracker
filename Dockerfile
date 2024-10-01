@@ -13,3 +13,5 @@ COPY . /app/
 # Package the application using Maven
 RUN mvn clean package
 
+# Run the main class from the built JAR
+CMD ["java", "-jar", "target/SportsTimeTracker.jar"]

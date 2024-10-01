@@ -5,14 +5,17 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+// Test class for SportsTimeTracker
 public class SportsTimeTrackerTest {
     private SportsTimeTracker tracker;
 
+    // Create a new instance of SportsTimeTracker before each test to ensure that the tests are independent
     @Before
     public void setUp() {
         tracker = new SportsTimeTracker();
     }
 
+    // Test the addActivity method by adding a single activity and checking if it was added correctly
     @Test
     public void testAddActivity() {
         tracker.addActivity("Football", 60, "Monday");
@@ -23,12 +26,14 @@ public class SportsTimeTrackerTest {
         assertEquals("Monday", activities.get(0).getDay());
     }
 
+    // Test the calculateTotalTime method by adding a single activity and checking if the total time is calculated correctly
     @Test
     public void testCalculateTotalTime_SingleActivity() {
         tracker.addActivity("Football", 60, "Monday");
         assertEquals(60, tracker.calculateTotalTime());
     }
 
+    // Test the calculateTotalTime method by adding multiple activities and checking if the total time is calculated correctly
     @Test
     public void testCalculateTotalTime_MultipleActivities() {
         tracker.addActivity("Football", 60, "Monday");
@@ -37,11 +42,13 @@ public class SportsTimeTrackerTest {
         assertEquals(195, tracker.calculateTotalTime());
     }
 
+    // Test the calculateTotalTime method with no activities added that the total time is 0
     @Test
     public void testCalculateTotalTime_NoActivities() {
         assertEquals(0, tracker.calculateTotalTime());
     }
 
+    // Test the viewActivities method by adding multiple activities and checking if they are returned correctly
     @Test
     public void testViewActivities() {
         tracker.addActivity("Football", 60, "Monday");

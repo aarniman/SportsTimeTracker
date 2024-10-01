@@ -3,14 +3,14 @@ pipeline {
     
     environment {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
-        DOCKERHUB_REPO = 'amirdi/devopschain'
+        DOCKERHUB_REPO = 'aarniman/sportstimetracker'
         DOCKER_IMAGE_TAG = 'ver2'
     }
     
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/ADirin/devopschain_f2024.git'
+                git 'https://github.com/aarniman/SportsTimeTracker.git'
             }
         }
         stage('Run Tests') {

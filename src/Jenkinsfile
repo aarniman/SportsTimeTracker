@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials'
         DOCKERHUB_REPO = 'aarniman/sportstimetracker'
-        DOCKER_IMAGE_TAG = 'ver2'
+        DOCKER_IMAGE_TAG = 'latest'
     }
     
     stages {

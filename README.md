@@ -1,6 +1,6 @@
-### SportsTimeTracker
+# SportsTimeTracker
 
-## Summary
+### Summary
 
 After working out the problems, the program works as intended.
 The program was created using Java ja tested with JUnit-tests.
